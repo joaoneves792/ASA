@@ -1,0 +1,14 @@
+reorganize your graph into a directed graph,
+  with two directed edges (u->v, v->u) for each original edge (u-v)
+
+while there is a path P from A to H:
+  (hint: use breadth first search to find paths - long story here)
+  //augment the path P:
+  for each edge (u->v) in P:
+    remove (u->v) from the graph and add (v->u) to it
+    (if v->u isn't there already)
+
+Label all vertices as reacheable or not reacheable from A.
+
+The bottleneck edges is the set of edges
+  that connect a reacheable and a unreacheable vertex
